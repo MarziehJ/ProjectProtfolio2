@@ -26,16 +26,30 @@ public class ElectricityMatrixGraph extends MatrixGraph {
     @Override
     public void printGraph() {
         for (int fromi = 0; fromi < matrixGraph.length; fromi++) {
-            System.out.println("Electricity from: " + getTownByIndex(fromi));
+            System.out.println("Electricity from: '" + getTownByIndex(fromi) + "'");
             for (int toj = 0; toj < matrixGraph.length; toj++) {
                 if (matrixGraph[fromi][toj] == 1) {
-                    System.out.print("To " + getTownByIndex(toj));
-                    System.out.print(", distance " + matrixWeightGraph[fromi][toj] + " km ");
+                    System.out.print("To '" + getTownByIndex(toj));
+                    System.out.print("', distance: " + matrixWeightGraph[fromi][toj] + " km ");
                     System.out.println(" ");
                 }
             }
             System.out.println(" ");
         }
+    }
+
+
+    @Override
+    public void printMSTEdges(int[] pred, int[] dist) {
+        for (int i = 0; i < matrixGraph.length; i++) {
+            System.out.println("'" + getTownByIndex(pred[i]) + "' To '" + getTownByIndex(i) + "', distance: " + dist[i] + " km ");
+        }
+    }
+
+    @Override
+    public void printMSTValue(int MST) {
+        System.out.println(" Minimum spanning Tree Distance: " + MST + " km");
+        System.out.println(" Minimum cost: " + MST * CostPerDistance + " kr");
     }
 
     private String getTownByIndex(int value) {
@@ -50,18 +64,5 @@ public class ElectricityMatrixGraph extends MatrixGraph {
         return "Not found!";
     }
 
-
-    @Override
-    public void printMSTEdges(int[] pred, int[] dist) {
-        for (int i = 0; i < matrixGraph.length; i++) {
-            System.out.println(" from: " + getTownByIndex(pred[i]) + " To: " + getTownByIndex(i) + " EdgeWeight: " + dist[i]);
-        }
-    }
-
-    @Override
-    public void printMSTValue(int MST) {
-        System.out.println(" Minimum spanning Tree Distance: " + MST);
-        System.out.println(" Minimum cost: " + MST * CostPerDistance + " kr");
-    }
 
 }

@@ -4,46 +4,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        MatrixGraph thisGraph = new MatrixGraph(7);
-//
-//        thisGraph.addEdge( 0, 1, 1);
-//        thisGraph.addEdge( 0, 2, 5);
-//        thisGraph.addEdge( 0, 4, 3);
-//        thisGraph.addEdge( 1, 5, 7);
-//        thisGraph.addEdge( 1, 4, 1);
-//        thisGraph.addEdge( 2, 3, 1);
-//        thisGraph.addEdge( 3, 6, 1);
-//        thisGraph.addEdge( 3, 4, 1);
-//        thisGraph.addEdge( 4, 3, 3);
-//        thisGraph.addEdge( 4, 2, 1);
-//        thisGraph.addEdge( 4, 5, 3);
-//        thisGraph.addEdge( 4, 6, 4);
-//        thisGraph.addEdge( 5, 6, 1);
-//
-//        thisGraph.printGraph();
-//        thisGraph.PrimsMST();
-
-//        thisGraph.addEdge( 0, 1, 4);
-//        thisGraph.addEdge( 0, 7, 8);
-//        thisGraph.addEdge( 1, 2, 8);
-//        thisGraph.addEdge( 1, 7, 11);
-//        thisGraph.addEdge( 2, 3, 7);
-//        thisGraph.addEdge( 2, 8, 2);
-//        thisGraph.addEdge( 2, 5, 4);
-//        thisGraph.addEdge( 3, 4, 9);
-//        thisGraph.addEdge( 3, 5, 14);
-//        thisGraph.addEdge( 4, 5, 10);
-//        thisGraph.addEdge( 5, 6, 2);
-//        thisGraph.addEdge( 6, 7, 1);
-//        thisGraph.addEdge( 6, 8, 6);
-//        thisGraph.addEdge( 7, 8, 7);
-
-        // Method invoked
-//        thisGraph.printGraph();
-//        thisGraph.PrimsMST();
-
-	// write your code here
-
         ElectricityMatrixGraph thisGraph = new ElectricityMatrixGraph(16);
         thisGraph.addTownElectricityData("Eskildstrup", "Maribo", 28);
         thisGraph.addTownElectricityData("Eskildstrup", "Nykøbing F", 13);
@@ -102,6 +62,7 @@ public class Main {
 
         thisGraph.printGraph();
         thisGraph.PrimsMST();
+
 
     }
 }
