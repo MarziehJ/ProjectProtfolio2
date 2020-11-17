@@ -59,7 +59,7 @@ public class MatrixGraph {
                 }
                 visited[u.index] = 1;
                 counter++;
-                MST = MST + distance[u.index];
+                MST += distance[u.index];
             }
         }
         printMSTValue(MST);

@@ -53,6 +53,7 @@ public class Main {
         thisGraph.addTownElectricityData("Næstved", "Ringsted", 26);
         thisGraph.addTownElectricityData("Næstved", "Slagelse", 37);
         thisGraph.addTownElectricityData("Næstved", "Sorø", 32);
+        thisGraph.addTownElectricityData("Næstved", "Vordingborg", 28);
 
         thisGraph.addTownElectricityData("Ringsted", "Roskilde", 31);
         thisGraph.addTownElectricityData("Ringsted", "Sorø", 15);
