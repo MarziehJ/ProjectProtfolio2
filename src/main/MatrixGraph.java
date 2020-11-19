@@ -8,7 +8,7 @@ public class MatrixGraph {
     protected int[][] matrixGraph;
     protected int[][] matrixWeightGraph;
 
-    MatrixGraph(int vertices) {
+    public MatrixGraph(int vertices) {
         matrixGraph = new int[vertices][vertices];
         matrixWeightGraph = new int[vertices][vertices];
     }
